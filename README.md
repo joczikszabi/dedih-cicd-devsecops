@@ -36,6 +36,12 @@ Lint:
 ruff check .
 ```
 
+Formátum:
+
+```bash
+ruff format .
+```
+
 Helyi szerver:
 
 ```bash
@@ -55,7 +61,8 @@ Swagger UI: <http://127.0.0.1:8000/docs>
 ## A CI workflow
 
 A `.github/workflows/ci.yml` egy aktív `build-and-test` job-bal indul (checkout,
-install, ruff, pytest). Alatta három kommentelt szekció vár a `# ` jelek mögött:
+install, `ruff check`, `ruff format --check`, pytest). Alatta három kommentelt
+szekció vár a `# ` jelek mögött:
 
 - `gitleaks` secret scan
 - `pip-audit` SCA
